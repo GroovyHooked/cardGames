@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.row {
+    display: flex;
+}
+
+.cards {
+    height: 130px;
+    width: 75px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.computerCards,
+.humanCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
