@@ -7,6 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .container {
@@ -14,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 50%;
+    user-select: none;
 }
 
 .row {
@@ -26,6 +28,7 @@ body {
     border: 1px solid black;
     border-radius: 4px;
     margin: 5px;
+    font-size: 3rem;
 }
 
 .computerCards,
@@ -33,4 +36,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.frontCards{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontCards::after,
+.frontCards::before{
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1rem;
+}
+.frontCards::before{
+    left: .5rem;
+    top: .5rem;
+}
+.frontCards::after{
+    right: .5rem;
+    bottom: .5rem;
+    transform: rotate(180deg);
+}
+.red {
+    color: red;
+}
+.black{
+    color: black;
 }
