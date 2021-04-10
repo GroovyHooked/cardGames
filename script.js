@@ -22,21 +22,22 @@ const computer = document.querySelector('.computerResult')
 const player = document.querySelector('.humanResult')
 const result = document.querySelector('.result')
 
-
 let playerDeck, computerDeck, inRound, stop
 
 
-document.addEventListener('click', ()=>{
-    if(stop){
-        startGame()
-        return
-    }
-    if(inRound){
-        cleanBeforeRound()
-    } else {
-        flipCards()
-    }
-})
+    document.addEventListener('click', ()=>{
+        if(stop){
+            startGame()
+            return
+        }
+        if(inRound){
+            cleanBeforeRound()
+        } else {
+            flipCards()
+        }
+    })
+
+
 startGame()
 function startGame(){
     const deck = new Deck()
@@ -97,4 +98,11 @@ function whoWon(cardOne, cardTwo){
 }
 function isGameOver(deck){
     return deck.numberOfCards === 0
+}
+
+function replaceCards(){
+    const replaceDiv = document.createElement('div')
+    replaceDiv.innerText = 'TC'
+    replaceDiv.classList.add('cards', 'frontCards')
+    return replaceDiv
 }

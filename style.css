@@ -21,7 +21,10 @@ body {
 .row {
     display: flex;
 }
-
+.result{
+    height: 50px;
+    line-height: 50px;
+}
 .cards {
     height: 130px;
     width: 75px;
@@ -30,7 +33,12 @@ body {
     margin: 5px;
     font-size: 3rem;
 }
-
+.computerCards{
+    background-color: #81b1df;
+}
+.humanCards{
+    background-color: #d8a2aa;
+}
 .computerCards,
 .humanCards {
     display: flex;
@@ -42,6 +50,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 130px;
+    width: 75px;
 }
 
 .frontCards::after,

@@ -38,7 +38,7 @@ class Card {
     getHTML(){
         const carDiv = document.createElement('div')
         carDiv.innerText = this.suit
-        carDiv.classList.add('frontCards', 'cards', this.color)
+        carDiv.classList.add('frontCards', this.color)
         carDiv.dataset.value = `${this.value} ${this.suit}`
         return carDiv
     }
