@@ -21,11 +21,13 @@ const playerDeckHTML = document.querySelector('.humanCards')
 const computer = document.querySelector('.computerResult')
 const player = document.querySelector('.humanResult')
 const result = document.querySelector('.result')
+const legend = document.querySelector('.legend')
 
 let playerDeck, computerDeck, inRound, stop
 
 
     document.addEventListener('click', ()=>{
+        legend.style.display = 'none'
         if(stop){
             startGame()
             return
@@ -91,6 +93,8 @@ function flipCards(){
 function  updateDeckCount(){
     computerDeckHTML.innerText = computerDeck.numberOfCards
     playerDeckHTML.innerText = playerDeck.numberOfCards
+    computerDeckHTML.style.color = "#264653"
+    playerDeckHTML.style.color = "#264653"
 }
 
 function whoWon(cardOne, cardTwo){

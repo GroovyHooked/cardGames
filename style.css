@@ -5,11 +5,22 @@
 body {
     margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100vh;
+    background-color: #264653;
+    color: #F4A261;
 }
-
+.myRow{
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: Baskerville;
+}
+.legend{
+    font-size: 1rem;
+    font-style: italic;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -20,24 +31,30 @@ body {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h4{
+    flex-basis: 100%;
+    text-align: center;
 }
 .result{
     height: 50px;
     line-height: 50px;
+    margin-top: 1.8rem;
 }
 .cards {
     height: 130px;
     width: 75px;
-    border: 1px solid black;
     border-radius: 4px;
     margin: 5px;
     font-size: 3rem;
 }
 .computerCards{
-    background-color: #81b1df;
+    background-color: #E76F51;
 }
 .humanCards{
-    background-color: #d8a2aa;
+    background-color: #E9C46A;
 }
 .computerCards,
 .humanCards {
@@ -52,6 +69,8 @@ body {
     align-items: center;
     height: 130px;
     width: 75px;
+    border: 1px solid black;
+    background-color: white;
 }
 
 .frontCards::after,
@@ -68,6 +87,15 @@ body {
     right: .5rem;
     bottom: .5rem;
     transform: rotate(180deg);
+}
+.fakeCardsC{
+    background-color: #E76F51;
+}
+.fakeCardsH{
+    background-color: #E9C46A;
+}
+.backCards{
+    border: 1px solid black;
 }
 .red {
     color: red;
